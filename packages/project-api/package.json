@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "@project/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env esnext exec --inspect --watch src/runner.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/glue": "^6.1.0",
+    "@project/core": "*",
+    "confidence": "^4.0.2",
+    "hapi": "^18.1.0",
+    "immutable": "^4.0.0-rc.12"
+  }
+}

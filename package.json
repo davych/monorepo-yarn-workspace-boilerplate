@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "name": "ss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
+    ],
+    "rules": {
+      "subject-case": [
+        0,
+        "never"
+      ]
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "esnext format 'packages/**/*.js",
+      "esnext lint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "esnext-scripts": "^1.5.2",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/config-lerna-scopes": "^7.5.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5"
+  }
+}
