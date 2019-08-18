@@ -4,7 +4,6 @@ import { compose } from './server'
     const server = await compose()
     await server.start()
   } catch (err) {
-    console.log(err)
     process.exit(1)
   }
 })()

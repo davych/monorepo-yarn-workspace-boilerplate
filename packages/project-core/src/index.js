@@ -1,5 +1,8 @@
+import * as consts from './consts'
+import * as signature from './signature'
+
 export { default as settings } from './settings'
 
-import * as consts from './consts'
+export { default as logger } from './logger'
 
-export { consts }
+export { consts, signature }

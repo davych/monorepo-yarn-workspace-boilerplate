@@ -22,7 +22,18 @@ export default {
   register: {
     plugins: [
       {
+        plugin: require('@hapi/yar'),
+        options: settings.yar
+      },
+      {
+        plugin: './apps/auth/plugins/jwt'
+      },
+      {
         plugin: './apps/hello',
+        routes: { prefix: settings.prefix }
+      },
+      {
+        plugin: './apps/auth',
         routes: { prefix: settings.prefix }
       }
     ]

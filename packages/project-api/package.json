@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/glue": "^6.1.0",
+    "@hapi/yar": "^9.2.1",
     "@project/core": "*",
     "confidence": "^4.0.2",
     "hapi": "^18.1.0",
