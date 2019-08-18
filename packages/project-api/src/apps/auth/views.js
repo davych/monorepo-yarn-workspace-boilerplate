@@ -1,6 +1,6 @@
 import * as services from './services'
 import * as validators from './validators'
-
+import status from 'http-status'
 export const plugin = {
   name: 'login',
 
@@ -28,6 +28,21 @@ export const plugin = {
             })
             .header('Authorization', token)
             .header('Set-Cookie', `token=${token}`)
+        }
+      },
+      {
+        method: 'POST',
+        path: '/logout',
+        options: {
+          tags: ['api'],
+          notes: 'logout'
+        },
+        handler: async (request, h) => {
+          return h
+            .response()
+            .header('Authorization', '')
+            .header('Set-Cookie', `token=''`)
+            .code(status.NO_CONTENT)
         }
       }
     ])

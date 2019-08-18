@@ -56,6 +56,7 @@
     "cross-env": "^5.2.0",
     "esnext-scripts": "^1.5.2",
     "hapi-auth-jwt2": "^8.6.1",
+    "http-status": "^1.3.2",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5"
   }

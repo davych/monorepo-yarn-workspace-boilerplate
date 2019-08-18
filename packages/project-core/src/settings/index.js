@@ -35,7 +35,6 @@ internals.settings = {
       'Authorization',
       'Content-Type',
       'If-None-Match',
-      'x-mfa-token',
       'X-CSRF-Token'
     ]
   },
