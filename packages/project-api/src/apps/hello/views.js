@@ -17,7 +17,7 @@ export const plugin = {
         },
         handler: async (request, h) => {
           const { name } = request.params
-          const response = h.response(services.getWelcome(name))
+          const response = h.response(await services.getWelcome(name))
           return response
         }
       }
