@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env esnext exec --inspect --watch src/runner.js"
+    "start": "cross-env esnext exec --watch src/demo2.js"
   },
   "author": "",
   "license": "ISC",
