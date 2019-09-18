@@ -1,2 +1,4 @@
-const { DAVY_CHEN } = process.env
-console.log('name', DAVY_CHEN)
+export default function () {
+  const { DAVY_CHEN } = process.env
+  return DAVY_CHEN
+}
